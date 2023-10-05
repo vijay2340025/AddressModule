@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: Address-Service
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/cart
+    username: root
+    password: welcome
+  jpa:
+    showSql: true
+    hibernate:
+      ddlAuto: update
+  mvc:
+    servlet:
+      path: /rpc
+
+server:
+  port: 0
+  servlet:
+    contextPath: /AddressClient
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8050/eureka/
